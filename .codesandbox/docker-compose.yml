@@ -1,0 +1,13 @@
+version: '3.5'
+
+services:
+  db_auth:
+    container_name: db_auth
+    environment:
+      - POSTGRES_DB=${DB_NAME}
+      - POSTGRES_PASSWORD=${DB_PASS}
+      - POSTGRES_USER=${DB_USER}
+    ports:
+      - "5432:5432"
+    image: postgres:16.2-alpine
+
